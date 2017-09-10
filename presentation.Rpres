@@ -1,0 +1,48 @@
+Coursera Data Science Specialization - Capstone Project
+========================================================
+author: Sushrut Shendre
+date: 09/09/2017
+autosize: true
+
+Introduction
+========================================================
+
+As a part of the Data Science Specialization taken by the Johns Hopkins University, we have developed a model that predicts the next word based on the input previous words. These types of models are useful especially in smartphone keyboards. 
+
+The data is from a corpus called HC Corpora. We have only considered the English language.
+
+
+Algorithm
+========================================================
+
+We have used the Ngrams model for this prediction. 
+We sort the list of individial words by their frequency. (Bigram)
+We then sort the list of two consecutive words, again on the basis of their frequency. (Trigram)
+Similarly for consecutive three and four words respectively. (Quadgram)
+
+If only one word is present in input, we use the bigram list. We filter the list such that the first word is the same as the input. In this filtered list, find the item with the highest frequency and the second word of this entry is our prediction.
+
+
+Algorithm (continued)
+========================================================
+
+For ties, we then use the list of single words to see which occurred most frequently.
+
+If two words are being given in the input, we use the Trigram list. 
+For three in the input, we use the Quadgram list.
+For more than three words, we take the last three words and then use the Quadgram list.
+The logic of the model remains the same as explained in the previous slide.
+
+
+Shiny app and resources
+========================================================
+
+The link to the app is:
+https://sushrut17.shinyapps.io/capstoneproject-4/
+
+We have to enter the word/phrase in the sidebar panel, and we get the prediction in the main panel in a fairly less time. (1-2 seconds)
+
+The github link containing the code is:
+https://github.com/sushrut17/capstone
+
+Thank you.
